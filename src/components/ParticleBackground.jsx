@@ -1,75 +1,76 @@
-import React, { useRef, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
-const ParticleBackground = ({ isDarkMode }) => {
+function ParticleBackground({ isDarkMode }) {
   const mountRef = useRef(null);
 
   useEffect(() => {
     const scene = new THREE.Scene();
-    scene.background = isDarkMode ? new THREE.Color(0xA3A3A3) : new THREE.Color(0x0D0D0D);
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({ alpha: true });
 
-    renderer.setPixelRatio(window.devicePixelRatio);
+    const geometry = new THREE.BufferGeometry();
+    const count = 1000000;
 
-    renderer.domElement.style.pointerEvents = 'none';
+    const positions = new Float32Array(count * 3);
+    const colors = new Float32Array(count * 3);
+
+    for (let i = 0; i < count * 3; i++) {
+      positions[i] = (Math.random() - 0.5) * 10;
+      colors[i] = isDarkMode ? 1 : 0.01; // Set dark grey (0.3) in light mode, white (1) in dark mode
+    }
+
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+    const material = new THREE.PointsMaterial({
+        size: 0.001,
+        vertexColors: true,
+        opacity: isDarkMode ? 0.07 : 0.13, // Set opacity based on the mode
+        transparent: true
+      });
+    const points = new THREE.Points(geometry, material);
+
+    scene.add(points);
 
     camera.position.z = 5;
+    renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
     mountRef.current.appendChild(renderer.domElement);
 
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-    const particleCount = isMobile ? 300000 : 1000000;
-    const particlesGeometry = new THREE.BufferGeometry();
-    const vertices = [];
-
-    for (let i = 0; i < particleCount; i++) {
-      const x = Math.random() * 20 - 10;
-      const y = Math.random() * 20 - 10;
-      const z = Math.random() * 20 - 15;
-      vertices.push(x, y, z);
-    }
-
-    particlesGeometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
-    const particlesMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: isMobile ? 0.01 : 0.001, transparent: true, opacity: isDarkMode ? 0.07 : 0.2 });
-    const particles = new THREE.Points(particlesGeometry, particlesMaterial);
-    scene.add(particles);
-
-    const animateParticles = () => {
-      particles.rotation.x += 0.0004;
-      particles.rotation.y += 0.0004;
-      particles.rotation.z += 0.0004;
-    };
-
-    const animate = () => {
-      requestAnimationFrame(animate);
-      animateParticles();
-      renderer.render(scene, camera);
-    };
-
-    animate();
-
-    const handleResize = () => {
+    const handleWindowResize = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleWindowResize);
 
-    return () => {
-      if (mountRef.current) {
-        mountRef.current.removeChild(renderer.domElement);
-      }
-      window.removeEventListener('resize', handleResize);
-      particlesMaterial.dispose();
-      particlesGeometry.dispose();
-      renderer.dispose();
+    const animate = function () {
+      requestAnimationFrame(animate);
+
+      points.rotation.x += 0.0005;
+      points.rotation.y += 0.0005;
+      renderer.render(scene, camera);
     };
+
+    animate();
+
+    //cleanup function to stop animation and remove event listener when component unmounts
+    return () => {
+      cancelAnimationFrame(animate);
+      window.removeEventListener('resize', handleWindowResize);
+      mountRef.current.removeChild(renderer.domElement);
+    };
+
   }, [isDarkMode]);
 
-  return <div ref={mountRef} />;
-};
+  return (
+    <div ref={mountRef} />
+  );
+}
 
 export default ParticleBackground;
+
+
+
