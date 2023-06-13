@@ -5,43 +5,52 @@ function ParticleBackground({ isDarkMode }) {
   const mountRef = useRef(null);
 
   useEffect(() => {
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ alpha: true });
 
     const geometry = new THREE.BufferGeometry();
-    const count = 1000000;
+    const count = 400000;
 
     const positions = new Float32Array(count * 3);
     const colors = new Float32Array(count * 3);
 
     for (let i = 0; i < count * 3; i++) {
       positions[i] = (Math.random() - 0.5) * 10;
-      colors[i] = isDarkMode ? 1 : 0.01; // Set dark grey (0.3) in light mode, white (1) in dark mode
+      colors[i] = isDarkMode ? 1 : 0.01; 
     }
 
     geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
     geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
     const material = new THREE.PointsMaterial({
-        size: 0.001,
-        vertexColors: true,
-        opacity: isDarkMode ? 0.07 : 0.13, // Set opacity based on the mode
-        transparent: true
-      });
+      size: 0.001, 
+      vertexColors: true,
+      opacity: isDarkMode ? 0.07 : 0.2, 
+      transparent: true,
+    });
     const points = new THREE.Points(geometry, material);
 
     scene.add(points);
 
-    camera.position.z = 5;
+    camera.position.z = width > 800 ? 5 : 10; 
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(width, height);
     mountRef.current.appendChild(renderer.domElement);
 
     const handleWindowResize = () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
+      width = window.innerWidth;
+      height = window.innerHeight;
+
+      camera.aspect = width / height;
       camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(width, height);
+
+      material.size = width > 800 ? 0.001 : 0.003; 
+      camera.position.z = width > 800 ? 5 : 10; 
     };
 
     window.addEventListener('resize', handleWindowResize);
@@ -56,21 +65,18 @@ function ParticleBackground({ isDarkMode }) {
 
     animate();
 
-    //cleanup function to stop animation and remove event listener when component unmounts
     return () => {
       cancelAnimationFrame(animate);
       window.removeEventListener('resize', handleWindowResize);
       mountRef.current.removeChild(renderer.domElement);
     };
-
   }, [isDarkMode]);
 
-  return (
-    <div ref={mountRef} />
-  );
+  return <div ref={mountRef} />;
 }
 
 export default ParticleBackground;
+
 
 
 
