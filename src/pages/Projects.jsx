@@ -5,7 +5,7 @@ import ProjectTile from '../components/ProjectTile';
 import PlantAppImage from '../assets/plantapp-image.png';
 import VinylDataImage from '../assets/vinyl-data-image.png';
 
-function Projects() {
+function Projects({ isDarkMode }) {
   const projectItems = [
     {
       details: '2023 / Coder Academy',
@@ -35,13 +35,14 @@ function Projects() {
 
   return (
     <div className="flex flex-col h-full">
-      <Header />
-      <div className="text-dark-mode-color flex-grow overflow-auto md:mt-12 lg:mt-20">
+      <Header isDarkMode={isDarkMode} />
+      <div className={`${isDarkMode ? 'text-dark-mode-color' : 'text-light-mode-color'} flex-grow overflow-auto md:mt-12 lg:mt-20`}>
         <h1 className="text-center text-xl font-roboto-mono font-light my-5">Recent Work</h1>
         <div className="flex flex-wrap justify-center items-center">
           {projectItems.map((project, index) => (
             <ProjectTile
               key={index}
+              isDarkMode={isDarkMode}
               projectDetails={project.details}
               projectDescription={project.description}
               techStack={project.stack}
@@ -50,7 +51,7 @@ function Projects() {
           ))}
         </div>
       </div>
-      <Footer />
+      <Footer isDarkMode={isDarkMode} />
     </div>
   );
 }
