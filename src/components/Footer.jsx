@@ -1,8 +1,17 @@
 import React from 'react'
+import ProLinks from './ProLinks'
+
 
 function Footer() {
   return (
-    <div className="text-dark-mode-color border border-dark-mode-color">Footer</div>
+    <div className="flex justify-between text-dark-mode-color ">
+        <div className="">
+
+        </div>
+        <div className="">
+            <ProLinks />
+        </div>
+    </div>
   )
 }
 

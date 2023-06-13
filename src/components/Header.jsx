@@ -6,7 +6,7 @@ import MobileMenu from './MobileMenu'
 function Header() {
   return (
     <div>
-        <div className="flex justify-between text-dark-mode-color border border-dark-mode-color">
+        <div className="flex justify-between text-dark-mode-color">
             <CodeSymbol />
             <div className="md:hidden">
                 <MobileMenu />
