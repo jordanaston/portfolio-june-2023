@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Info from './pages/Info'
+import ParticleBackground from './components/ParticleBackground'
 
 
 function App() {
@@ -19,9 +20,10 @@ function App() {
 
   return (
     <div className={isDarkMode ? "bg-light-mode-color min-h-screen" : "bg-dark-mode-color min-h-screen"}>
+      <ParticleBackground isDarkMode={isDarkMode} />
       <div className={`absolute inset-2 sm:inset-3 md:inset-4 lg:inset-5 border ${isDarkMode ? "border-dark-mode-color" : "border-light-mode-color"}`}>
         <Routes>
-        <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
+          <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
           <Route path="/projects" element={<Projects isDarkMode={isDarkMode} />} />
           <Route path="/info" element={<Info isDarkMode={isDarkMode} />} />
         </Routes>
