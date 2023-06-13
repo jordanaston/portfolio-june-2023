@@ -36,7 +36,7 @@ function Projects() {
   return (
     <div className="flex flex-col h-full">
       <Header />
-      <div className="text-dark-mode-color flex-grow overflow-auto">
+      <div className="text-dark-mode-color flex-grow overflow-auto md:mt-12 lg:mt-20">
         <h1 className="text-center text-xl font-roboto-mono font-light my-5">Recent Work</h1>
         <div className="flex flex-wrap justify-center items-center">
           {projectItems.map((project, index) => (
