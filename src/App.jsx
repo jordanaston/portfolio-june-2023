@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Info from './pages/Info'
-// import ParticleBackground from './components/ParticleBackground'
 
 
 
