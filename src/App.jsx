@@ -5,11 +5,10 @@ import Projects from './pages/Projects'
 import Info from './pages/Info'
 
 
-
 function App() {
   return (
     <div className="bg-light-mode-color min-h-screen">
-      <div className="absolute inset-5 border border-dark-mode-color p-3">
+      <div className="absolute inset-2 sm:inset-3 md:inset-4 lg:inset-5 border border-dark-mode-color">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
