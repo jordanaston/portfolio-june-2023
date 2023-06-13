@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-function TopNavBar() {
+function TopNavBar({ isDarkMode }) {
   const location = useLocation();
   
   const [hoveredLink, setHoveredLink] = useState(null);
@@ -15,7 +15,7 @@ function TopNavBar() {
   });
 
   return (
-    <div className="text-dark-mode-color text-xl md:mt-4 md:mr-5 lg:mr-7 lg:mt-4 lg:text-xl md:font-light">
+    <div className={`${isDarkMode ? "text-dark-mode-color" : "text-light-mode-color"} text-xl md:mt-4 md:mr-5 lg:mr-7 lg:mt-4 lg:text-xl md:font-light`}>
       <ul className="flex space-x-6">
         <li>
           <Link 

@@ -2,14 +2,14 @@ import React from 'react'
 import ProLinks from './ProLinks'
 
 
-function Footer() {
+function Footer({ isDarkMode }) {
   return (
-    <div className="flex justify-between text-dark-mode-color">
+    <div className="flex justify-between">
         <div className="">
 
         </div>
         <div className="">
-            <ProLinks />
+            <ProLinks isDarkMode={isDarkMode} />
         </div>
     </div>
   )

@@ -1,13 +1,13 @@
 import React from 'react';
 
-function ProjectTile({ projectDescription, projectDetails, techStack, projectImage }) {
+function ProjectTile({ projectDescription, projectDetails, techStack, projectImage, isDarkMode }) {
   return (
     <div>
       <div className="m-4 w-80 h-60">
         {projectImage ? (
           <img src={projectImage} alt="Project Image" />
         ) : (
-          <div className="flex justify-center items-center w-80 h-60 border-2 font-roboto font-regular">
+          <div className={`flex justify-center items-center border w-80 h-60 font-roboto font-regular ${isDarkMode ? 'border-dark-mode-color' : 'border-light-mode-color'}`}>
             <p>In Development...</p>
           </div>
         )}
