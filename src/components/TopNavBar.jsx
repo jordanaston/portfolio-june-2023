@@ -15,7 +15,7 @@ function TopNavBar() {
   });
 
   return (
-    <div className="text-dark-mode-color text-xl md:mt-5 md:mr-5 lg:mr-9 lg:mt-7 lg:text-xl lg:font-light">
+    <div className="text-dark-mode-color text-xl md:mt-4 md:mr-5 lg:mr-7 lg:mt-4 lg:text-xl md:font-light">
       <ul className="flex space-x-6">
         <li>
           <Link 

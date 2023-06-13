@@ -10,9 +10,9 @@ function ProLinks() {
   });
 
   return (
-    <nav className="text-dark-mode-color font-roboto-mono sm:pb-2 sm:pr-2 lg:mr-5 lg:mb-3">
+    <nav className="text-dark-mode-color text-right font-roboto-mono pb-2 pr-4 mt-3 sm:pb-2 sm:pr-4 lg:pb-3 lg:pr-5 lg:text-md">
       <ul>
-        <li className="lg:text-lg lg:mb-2">
+        <li className="mb-2">
           <a 
             href="https://github.com/jordanaston" 
             target="_blank" 
@@ -24,7 +24,7 @@ function ProLinks() {
             github ➚
           </a> 
         </li>
-        <li className="lg:text-lg">
+        <li className="mb-1">
           <a 
             href="https://www.linkedin.com/in/jordan-aston-164aab178/" 
             target="_blank" 

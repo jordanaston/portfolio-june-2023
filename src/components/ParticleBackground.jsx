@@ -6,7 +6,7 @@ const ParticleBackground = ({ isDarkMode }) => {
 
   useEffect(() => {
     const scene = new THREE.Scene();
-    scene.background = isDarkMode ? new THREE.Color(0x0D0D0D) : new THREE.Color(0xA3A3A3);
+    scene.background = isDarkMode ? new THREE.Color(0xA3A3A3) : new THREE.Color(0x0D0D0D);
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer();
 

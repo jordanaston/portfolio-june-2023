@@ -21,7 +21,7 @@ function MobileMenu() {
         <img 
           src={MobileMenuDark} 
           alt="Mobile Menu Image" 
-          className="w-16 pt-1 sm:pt-3 sm:mr-3" 
+          className="w-16 pt-1 mr-1 sm:pt-3 sm:mr-3" 
         />
       </button>
       <div
