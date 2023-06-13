@@ -3,11 +3,11 @@ import React from 'react';
 function ProjectTile({ projectDescription, projectDetails, techStack, projectImage }) {
   return (
     <div>
-      <div className="flex project-tile m-4 w-80 h-60 items-center justify-center relative">
+      <div className="m-4 w-80 h-60">
         {projectImage ? (
           <img src={projectImage} alt="Project Image" />
         ) : (
-          <div className="flex items-center w-80 h-60 border-2 font-roboto font-regular justify-center">
+          <div className="flex justify-center items-center w-80 h-60 border-2 font-roboto font-regular">
             <p>In Development...</p>
           </div>
         )}
