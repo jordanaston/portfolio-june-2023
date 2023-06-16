@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 function Info({ isDarkMode }) {
   const modeColor = isDarkMode ? 'dark-mode-color' : 'light-mode-color';
   const modeTextColor = isDarkMode ? 'text-dark-mode-color' : 'text-light-mode-color';
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(import.meta.env.VITE_APP_EMAIL_SERVICE_ID, import.meta.env.VITE_APP_EMAIL_TEMPLATE_ID, form.current, import.meta.env.VITE_APP_EMAIL_PUBLIC_KEY)
+      .then((result) => {
+          console.log(result.text);
+          alert('Email successfully sent!');
+          form.current.reset();
+      }, (error) => {
+          console.log(error.text);
+          alert('Failed to send email. Please try again!');
+      });
+  };
 
   return (
     <div className={`flex flex-col h-full ${modeColor}`}>
@@ -44,12 +61,12 @@ function Info({ isDarkMode }) {
             jordanaston93@gmail.com <br />
           </p>
 
-          <form className={`mt-12 mb-12 font-roboto-mono font-light text-lg border-${modeColor} bg-transparent outline-none`}>
-            <label htmlFor="name" className="block">Name</label>
-            <input id="name" name="name" type="text" required className={`mt-3 block w-full sm:w-3/5 h-8 pl-2 border border-${modeColor} bg-transparent outline-none`} />
+          <form ref={form} onSubmit={sendEmail} className={`mt-12 mb-12 font-roboto-mono font-light text-lg border-${modeColor} bg-transparent outline-none`}>
+            <label htmlFor="from_name" className="block">Name</label>
+            <input id="from_name" name="from_name" type="text" required className={`mt-3 block w-full sm:w-3/5 h-8 pl-2 border border-${modeColor} bg-transparent outline-none`} />
 
-            <label htmlFor="email" className="block mt-4">Email</label>
-            <input id="email" name="email" type="email" required className={`mt-3 block w-full sm:w-3/5 h-8 pl-2 border border-${modeColor} bg-transparent outline-none`} />
+            <label htmlFor="from_email" className="block mt-4">Email</label>
+            <input id="from_email" name="from_email" type="email" required className={`mt-3 block w-full sm:w-3/5 h-8 pl-2 border border-${modeColor} bg-transparent outline-none`} />
 
             <label htmlFor="phone" className="block mt-4">Phone</label>
             <input id="phone" name="phone" type="tel" required className={`mt-3 block w-full sm:w-3/5 h-8 pl-2 border border-${modeColor} bg-transparent outline-none`} />
@@ -57,7 +74,7 @@ function Info({ isDarkMode }) {
             <label htmlFor="message" className="block mt-4">Message</label>
             <textarea id="message" name="message" required className={`mt-3 block w-full sm:w-3/5 h-32 pl-2 border border-${modeColor} bg-transparent outline-none`} />
 
-            <button type="submit" className={`mt-6 px-4 py-2 bg-none border border-${modeColor} text-${modeColor} rounded`}>Submit</button>
+            <button type="submit" value="Send" className={`mt-6 px-4 py-2 bg-none border border-${modeColor} text-${modeColor} rounded`}>Submit</button>
           </form>
 
         </div>
@@ -70,4 +87,6 @@ function Info({ isDarkMode }) {
 }
 
 export default Info;
+
+
 
