@@ -12,7 +12,12 @@ function Info({ isDarkMode }) {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(import.meta.env.VITE_APP_EMAIL_SERVICE_ID, import.meta.env.VITE_APP_EMAIL_TEMPLATE_ID, form.current, import.meta.env.VITE_APP_EMAIL_PUBLIC_KEY)
+    emailjs.sendForm(
+      
+      import.meta.env.VITE_APP_EMAIL_SERVICE_ID, 
+      import.meta.env.VITE_APP_EMAIL_TEMPLATE_ID, form.current, 
+      import.meta.env.VITE_APP_EMAIL_PUBLIC_KEY)
+
       .then((result) => {
           console.log(result.text);
           alert('Email successfully sent!');
