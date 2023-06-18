@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 
 function CodeSymbol({ isDarkMode }) {
+
+  const modeColor = isDarkMode ? 'dark-mode-color' : 'light-mode-color';
+
   const [isHovered, setIsHovered] = useState(false);
 
   const symbolStyle = {
@@ -13,7 +16,7 @@ function CodeSymbol({ isDarkMode }) {
   return (
     <div>
       <p
-        className={`${isDarkMode ? 'text-dark-mode-color' : 'text-light-mode-color'} font-roboto font-extra-light text-4xl pl-4 pt-3 sm:pl-6 sm:pt-5 md:pt-4 md:pl-5 lg:pl-6 lg:pt-4`}
+        className={`text-${modeColor} font-roboto font-extra-light text-4xl pl-4 pt-3 sm:pl-6 sm:pt-5 md:pt-4 md:pl-5 lg:pl-6 lg:pt-4`}
         style={symbolStyle}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}

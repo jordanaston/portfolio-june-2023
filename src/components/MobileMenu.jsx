@@ -4,6 +4,9 @@ import MobileMenuDark from '../assets/mobile-menu-dark.png';
 import MobileMenuLight from '../assets/mobile-menu-light.png';
 
 function MobileMenu({ isDarkMode }) {
+
+    const modeColor = isDarkMode ? 'dark-mode-color' : 'light-mode-color';
+
     const [isOpen, setIsOpen] = useState(false);
     const handleClick = () => setIsOpen(!isOpen);
 
@@ -33,11 +36,11 @@ function MobileMenu({ isDarkMode }) {
                 `}
             >
                 <div className="absolute top-0 right-0 h-full p-4 flex flex-col font-roboto-mono font-extra-light items-end">
-                    <button onClick={handleClick} className={`text-3xl ${isDarkMode ? "text-dark-mode-color" : "text-light-mode-color"}`}>
+                    <button onClick={handleClick} className={`text-3xl text-${modeColor}`}>
                         X
                     </button>
                 </div>
-                <ul className={`flex flex-col items-start ml-4 font-roboto-mono font-extra-light justify-center h-full space-y-10 ${isDarkMode ? "text-dark-mode-color" : "text-light-mode-color"}`}>
+                <ul className={`flex flex-col items-start ml-4 font-roboto-mono font-extra-light justify-center h-full space-y-10 text-${modeColor}`}>
                     <li>
                         <Link
                             to="/"

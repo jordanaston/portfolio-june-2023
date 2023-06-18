@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 
 function ProLinks({ isDarkMode }) {
+
+  const modeColor = isDarkMode ? 'dark-mode-color' : 'light-mode-color';
+
   const [hoveredLink, setHoveredLink] = useState(null);
 
   const linkStyle = (path) => ({
@@ -10,7 +13,7 @@ function ProLinks({ isDarkMode }) {
   });
 
   return (
-    <nav className={`${isDarkMode ? "text-dark-mode-color" : "text-light-mode-color"} text-right font-roboto-mono pb-2 pr-4 mt-3 sm:pb-2 sm:pr-4 lg:pb-3 lg:pr-5 lg:text-md`}>
+    <nav className={`text-${modeColor} text-right font-roboto-mono pb-2 pr-4 mt-3 sm:pb-2 sm:pr-4 lg:pb-3 lg:pr-5 lg:text-md`}>
       <ul>
         <li className="mb-2">
           <a 

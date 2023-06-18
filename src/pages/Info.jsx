@@ -5,7 +5,6 @@ import Footer from '../components/Footer';
 
 function Info({ isDarkMode }) {
   const modeColor = isDarkMode ? 'dark-mode-color' : 'light-mode-color';
-  const modeTextColor = isDarkMode ? 'text-dark-mode-color' : 'text-light-mode-color';
 
   const form = useRef();
 
@@ -32,7 +31,7 @@ function Info({ isDarkMode }) {
     <div className={`flex flex-col h-full ${modeColor}`}>
       <Header isDarkMode={isDarkMode} />
 
-      <div className={`justify-center flex-grow overflow-scroll ${modeTextColor}`}>
+      <div className={`justify-center flex-grow overflow-scroll text-${modeColor}`}>
         <div className="font-roboto-mono font-light px-8 pt-8 leading-[1.8] sm:w-[80%] sm:mx-auto lg:w-[55%] lg:mx-auto sm:pt-10 md:pt-20">
 
           <p className="font-regular text-lg">💻 About</p>

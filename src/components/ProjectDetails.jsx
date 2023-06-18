@@ -5,6 +5,9 @@ import Footer from '../components/Footer';
 import ProjectContext from '../components/ProjectContext';
 
 function ProjectDetails({ isDarkMode }) {
+
+  const modeColor = isDarkMode ? 'dark-mode-color' : 'light-mode-color';
+
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -16,7 +19,7 @@ function ProjectDetails({ isDarkMode }) {
   return (
     <div className="flex flex-col h-full">
       <Header isDarkMode={isDarkMode} />
-      <div className={`${isDarkMode ? 'text-dark-mode-color' : 'text-light-mode-color'} flex-grow overflow-auto md:mt-12 lg:mt-20`}>
+      <div className={`text-${modeColor} flex-grow overflow-auto md:mt-12 lg:mt-20`}>
         
         <div className="flex flex-wrap justify-center items-center font-roboto-mono font-light text-lg">
           <button onClick={handleGoBack}>← Back</button>

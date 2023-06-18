@@ -5,9 +5,7 @@ import ProLinks from './ProLinks'
 function Footer({ isDarkMode }) {
   return (
     <div className="flex justify-between">
-        <div className="">
-
-        </div>
+        <div></div>
         <div className="">
             <ProLinks isDarkMode={isDarkMode} />
         </div>

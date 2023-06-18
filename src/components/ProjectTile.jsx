@@ -4,6 +4,8 @@ import ProjectContext from '../components/ProjectContext';
 
 function ProjectTile({ projectId, isDarkMode }) {
 
+  const modeColor = isDarkMode ? 'dark-mode-color' : 'light-mode-color';
+
   const projectItems = useContext(ProjectContext);
   const project = projectItems.find((item) => item.id === projectId);
 
@@ -18,7 +20,7 @@ function ProjectTile({ projectId, isDarkMode }) {
           {project.image ? (
             <img src={project.image} alt="Project Image" />
           ) : (
-            <div className={`flex justify-center items-center border w-80 h-60 font-roboto font-regular ${isDarkMode ? 'border-dark-mode-color' : 'border-light-mode-color'}`}>
+            <div className={`flex justify-center items-center border w-80 h-60 font-roboto font-regular border-${modeColor}`}>
               <p>In Development...</p>
             </div>
           )}
