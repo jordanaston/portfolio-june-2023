@@ -1,41 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProjectTile from '../components/ProjectTile';
-import PlantAppImage from '../assets/plantapp-image.png';
-import VinylDataImage from '../assets/vinyl-data-image.png';
+import ProjectContext from '../components/ProjectContext';
 
 function Projects({ isDarkMode }) {
-  const projectItems = [
-    {
-      id: 'full-stack-app', // unique ID
-      details: '2023 / Coder Academy',
-      description: 'Full Stack Application',
-      stack: 'MERN Stack | Tailwind',
-      image: ''
-    },
-    {
-      id: 'music-player-app', // unique ID
-      details: '2023 / Personal Project',
-      description: 'Music Player App',
-      stack: 'Javascript | React | Tailwind',
-      image: ''
-    },
-    {
-      id: 'vinyl-data-api', // unique ID
-      details: '2023 / Coder Academy',
-      description: 'Vinyl Data API - API Webserver',
-      stack: 'Python | Flask | PostgreSQL',
-      image: VinylDataImage,
-    },
-    {
-      id: 'plantapp', // unique ID
-      details: '2022 / Coder Academy',
-      description: 'PlantApp - Terminal Application',
-      stack: 'Python',
-      image: PlantAppImage,
-    },
-  ];
+  const projectItems = useContext(ProjectContext);
 
   return (
     <div className="flex flex-col h-full">
@@ -62,4 +32,5 @@ function Projects({ isDarkMode }) {
 }
 
 export default Projects;
+
 

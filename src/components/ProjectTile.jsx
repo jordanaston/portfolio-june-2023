@@ -5,7 +5,7 @@ function ProjectTile({ projectId, projectDescription, projectDetails, techStack,
   return (
     <div>
       <Link to={`/projects/${projectId}`}>
-        <div className="m-4 w-80 h-60">
+        <div className="m-4 w-80 h-60 hover:opacity-75 transition-opacity duration-200">
           {projectImage ? (
             <img src={projectImage} alt="Project Image" />
           ) : (
@@ -25,3 +25,4 @@ function ProjectTile({ projectId, projectDescription, projectDetails, techStack,
 }
 
 export default ProjectTile;
+
