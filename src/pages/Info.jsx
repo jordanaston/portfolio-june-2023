@@ -33,9 +33,9 @@ function Info({ isDarkMode }) {
       <Header isDarkMode={isDarkMode} />
 
       <div className={`justify-center flex-grow overflow-scroll ${modeTextColor}`}>
-        <div className="font-roboto-mono font-light px-8 pt-8 leading-[2.7] sm:w-[80%] sm:mx-auto lg:w-[55%] lg:mx-auto sm:pt-10 md:pt-20">
+        <div className="font-roboto-mono font-light px-8 pt-8 leading-[1.8] sm:w-[80%] sm:mx-auto lg:w-[55%] lg:mx-auto sm:pt-10 md:pt-20">
 
-          <p className="font-regular text-lg">■ About</p>
+          <p className="font-regular text-lg">💻 About</p>
           <br />
           <p>
             My background until now has been rooted in live-sound engineering and performance, 
@@ -45,19 +45,19 @@ function Info({ isDarkMode }) {
             a career in software development. After dedicating some time to self-learning, I further 
             solidified my skills with a Diploma in Information Technology from Coder Academy. Today, I 
             channel my blend of experiences into building engaging and impactful web experiences. 
-            <br /><br />
+            <br /><br /><br /><br />
           </p>
 
-          <p className="font-regular text-lg">■ Tools</p>
+          <p className="font-regular text-lg">🛠 Tools</p>
           <br />
           <p>  
             I'm currently coding with: <br />
             Javascript | MERN | Python | Flask | HTML | CSS | Tailwind <br /><br />
             I'm always learning and currently developing skills in: <br />
-            Photoshop | Illustrator | Bootstrap <br /><br />
+            Photoshop | Illustrator | Bootstrap <br /><br /><br /><br />
           </p>  
 
-          <p className="font-regular text-lg">■ Contact</p>
+          <p className="font-regular text-lg">📞 Contact</p>
           <br />
           <p> 
             If you like my work, I’d love for you to get in touch! <br /><br />
