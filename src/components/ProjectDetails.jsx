@@ -43,7 +43,7 @@ function ProjectDetails({ isDarkMode }) {
             {projectDetails ? projectDetails.stack : `Project: ${id} not found`}<br />
           </p>
 
-          <div className={`flex flex-col text-center text-md ml-3 ${isDarkMode ? 'text-blue-500' : 'text-light-mode-color'}`}>
+          <div className={`flex flex-col text-center text-md ml-5 ${isDarkMode ? 'text-blue-500' : 'text-light-mode-color'}`}>
             {projectDetails.githubRepo && (
               <a 
                 href={projectDetails.githubRepo} 
