@@ -4,23 +4,25 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 function Info({ isDarkMode }) {
+  // Determine the mode color based on whether Dark Mode is active or not.
   const modeColor = isDarkMode ? 'dark-mode-color' : 'light-mode-color';
 
+  // useRef hook is used to access the form DOM element directly and manipulate it.
   const form = useRef();
 
+  // A function to send an email when the form is submitted.
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // Send the form data through emailjs service.
     emailjs.sendForm(
-      
       import.meta.env.VITE_APP_EMAIL_SERVICE_ID, 
       import.meta.env.VITE_APP_EMAIL_TEMPLATE_ID, form.current, 
       import.meta.env.VITE_APP_EMAIL_PUBLIC_KEY)
-
       .then((result) => {
           console.log(result.text);
           alert('Email successfully sent!');
-          form.current.reset();
+          form.current.reset(); // Reset the form after email has been sent.
       }, (error) => {
           console.log(error.text);
           alert('Failed to send email. Please try again!');
@@ -34,6 +36,7 @@ function Info({ isDarkMode }) {
       <div className={`justify-center flex-grow overflow-scroll text-${modeColor}`}>
         <div className="font-roboto-mono font-light px-8 pt-8 leading-[1.8] sm:w-[80%] sm:mx-auto lg:w-[55%] lg:mx-auto sm:pt-10 md:pt-20">
 
+          {/* Paragraphs containing specific information about the user */}
           <p className="font-regular text-lg">💻 About</p>
           <br />
           <p>
@@ -65,7 +68,9 @@ function Info({ isDarkMode }) {
             jordanaston93@gmail.com <br />
           </p>
 
+          {/* Contact form for user to fill in and submit to send an email */}
           <form ref={form} onSubmit={sendEmail} className={`mt-12 mb-12 font-roboto-mono font-light text-lg border-${modeColor} bg-transparent outline-none`}>
+            {/* The form includes fields for name, email, phone number, and a message */}
             <label htmlFor="from_name" className="block">Name</label>
             <input id="from_name" name="from_name" type="text" required className={`mt-3 block w-full sm:w-3/5 h-8 pl-2 border border-${modeColor} bg-transparent outline-none`} />
 
@@ -91,6 +96,7 @@ function Info({ isDarkMode }) {
 }
 
 export default Info;
+
 
 
 

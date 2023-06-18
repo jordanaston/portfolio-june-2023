@@ -2,22 +2,21 @@ import React from 'react';
 import PlantAppImage from '../assets/plantapp-image.png';
 import VinylDataImage from '../assets/vinyl-data-image.png';
 
+// List of project items
 const projectItems = [
   {
-    id: 'full-stack-app',
-    details: '2023 / Coder Academy',
-    description: 'Full Stack Application',
-    stack: 'MERN Stack | Tailwind',
-    image: '',
-    githubRepo: '',
-    deployedSite: '',
-    paraImages: [
+    id: 'full-stack-app', // Identifier for the project
+    details: '2023 / Coder Academy', // Additional details about the project
+    description: 'Full Stack Application', // Project description
+    stack: 'MERN Stack | Tailwind', // Tech stack used in the project
+    image: '', // Image of the project, if any
+    githubRepo: '', // Link to the project's GitHub repository
+    deployedSite: '', // Link to the deployed project
+    paraImages: [ // Images to display in the project description paragraphs
         { src: '', position: 1 },
         { src: '', position: 2 },
       ],
-    paragraphs: [
-
-    ]
+    paragraphs: [] // Paragraphs of project description
   },
   {
     id: 'music-player-app',
@@ -31,9 +30,7 @@ const projectItems = [
         { src: '', position: 1 },
         { src: '', position: 2 },
       ],
-    paragraphs: [
-        
-    ]
+    paragraphs: []
   },
   {
     id: 'vinyl-data-api',
@@ -74,6 +71,8 @@ const projectItems = [
   },
 ];
 
+// Create a context for the project items
 const ProjectContext = React.createContext(projectItems);
 
 export default ProjectContext;
+

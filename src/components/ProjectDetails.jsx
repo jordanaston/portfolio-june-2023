@@ -5,15 +5,22 @@ import Footer from '../components/Footer';
 import ProjectContext from '../components/ProjectContext';
 
 function ProjectDetails({ isDarkMode }) {
-
+  // Determine the mode color based on whether Dark Mode is active or not.
   const modeColor = isDarkMode ? 'dark-mode-color' : 'light-mode-color';
 
+  // Get the project ID from the route parameters.
   const { id } = useParams();
+
+  // Get the navigate function from the react-router-dom hook.
   const navigate = useNavigate();
 
+  // Use the project context to fetch the project data.
   const projectItems = useContext(ProjectContext);
+
+  // Fetch the specific project using the projectId from the route parameters.
   const projectDetails = projectItems.find((project) => project.id === id);
 
+  // Function to handle the back navigation.
   const handleGoBack = () => navigate(-1);
 
   return (
@@ -22,10 +29,11 @@ function ProjectDetails({ isDarkMode }) {
       <div className={`text-${modeColor} flex-grow overflow-auto md:mt-12 lg:mt-20`}>
         
         <div className="flex flex-wrap justify-center items-center font-roboto-mono font-light text-lg">
-          <button onClick={handleGoBack}>← Back</button>
+          <button onClick={handleGoBack} className="transition duration-300 ease-in-out transform hover:scale-105 mr-3">← Back</button>
         </div>
 
         <div className="flex flex-col justify-center items-center font-roboto-mono font-light mx-5 leading-[1.8] sm:mx-20 md:mx-40 lg:mx-60">
+          {/* Display the project details */}
           <h1 className="text-center text-xl mt-5">
             {projectDetails ? projectDetails.description : `Project: ${id} not found`}
           </h1>
@@ -35,7 +43,7 @@ function ProjectDetails({ isDarkMode }) {
             {projectDetails ? projectDetails.stack : `Project: ${id} not found`}<br />
           </p>
 
-          <div className={`flex flex-col text-center text-md ${isDarkMode ? 'text-blue-500' : 'text-light-mode-color'}`}>
+          <div className={`flex flex-col text-center text-md ml-3 ${isDarkMode ? 'text-blue-500' : 'text-light-mode-color'}`}>
             {projectDetails.githubRepo && (
               <a 
                 href={projectDetails.githubRepo} 
@@ -58,6 +66,7 @@ function ProjectDetails({ isDarkMode }) {
             )}
           </div>
 
+          {/* Render paragraphs and corresponding images */}
           {projectDetails && projectDetails.paragraphs.map((para, index) => {
             const imagesToInsert = projectDetails.paraImages.filter((img) => img.position === index + 1);
             return (
@@ -77,6 +86,7 @@ function ProjectDetails({ isDarkMode }) {
 }
 
 export default ProjectDetails;
+
 
 
 
