@@ -22,7 +22,7 @@ function ProjectDetails({ isDarkMode }) {
           <button onClick={handleGoBack}>← Back</button>
         </div>
 
-        <div className="flex flex-col justify-center items-center font-roboto-mono font-light mx-5 sm:mx-20 md:mx-40 lg:mx-60">
+        <div className="flex flex-col justify-center items-center font-roboto-mono font-light mx-5 leading-[1.8] sm:mx-20 md:mx-40 lg:mx-60">
           <h1 className="text-center text-xl mt-5">
             {projectDetails ? projectDetails.description : `Project: ${id} not found`}
           </h1>
