@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import ProjectContext from '../components/ProjectContext';
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import ProjectContext from "../components/ProjectContext";
 
 function ProjectTile({ projectId, isDarkMode }) {
   // Determine the mode color based on whether Dark Mode is active or not.
-  const modeColor = isDarkMode ? 'dark-mode-color' : 'light-mode-color';
+  const modeColor = isDarkMode ? "dark-mode-color" : "light-mode-color";
 
   // Use the project context to fetch the project data.
   const projectItems = useContext(ProjectContext);
@@ -20,12 +20,14 @@ function ProjectTile({ projectId, isDarkMode }) {
   return (
     <div>
       <Link to={`/projects/${projectId}`}>
-        <div className="m-4 w-80 h-60 hover:opacity-75 transition-opacity duration-200">
+      <div className="m-4 w-80 h-60 hover:scale-105 transition-transform duration-200">
           {/* Check if the project has an image, if not render 'In Development...' */}
           {project.image ? (
             <img src={project.image} alt="Project Image" />
           ) : (
-            <div className={`flex justify-center items-center border w-80 h-60 font-roboto font-regular border-${modeColor}`}>
+            <div
+              className={`flex justify-center items-center border w-80 h-60 font-roboto font-regular border-${modeColor}`}
+            >
               <p>In Development...</p>
             </div>
           )}
@@ -42,6 +44,3 @@ function ProjectTile({ projectId, isDarkMode }) {
 }
 
 export default ProjectTile;
-
-
-

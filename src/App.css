@@ -1,46 +1,46 @@
-  /* Add a custom font named 'Capture The Waves' from a local file */
-  @font-face {
-    font-family: 'Capture The Waves';
-    src: url('./fonts/Capture The Waves-w1rx8.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
+/* Add a custom font named 'Capture The Waves' from a local file */
+@font-face {
+  font-family: "Capture The Waves";
+  src: url("./fonts/Capture The Waves-w1rx8.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
-  /* Set height and width of html and body elements to full viewport. 
+/* Set height and width of html and body elements to full viewport. 
      Remove any default margins and padding, and disable overflow to hide scrollbars */
-  html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
-  /* Set height and width of root element to full viewport */
-  #root {
-    height: 100%;
-    width: 100%;
-  }
+/* Set height and width of root element to full viewport */
+#root {
+  height: 100%;
+  width: 100%;
+}
 
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  ::-webkit-scrollbar {
-    display: none;
-  }
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
 
-  /* Hide scrollbar for IE and Edge */
-  html {
-    scrollbar-width: none; /* IE and Edge */
-    -ms-overflow-style: none;  /* IE 10+ */
-  }
+/* Hide scrollbar for IE and Edge */
+html {
+  scrollbar-width: none; /* IE and Edge */
+  -ms-overflow-style: none; /* IE 10+ */
+}
 
-  /* Hide scrollbar for Firefox */
-  body {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* IE 10+ */
-  }
+/* Hide scrollbar for Firefox */
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
 
-  /* Hide scrollbar for Chrome, Safari and Opera on the body element */
-  body::-webkit-scrollbar {
-    display: none;
-  }
-
+/* Hide scrollbar for Chrome, Safari and Opera on the body element */
+body::-webkit-scrollbar {
+  display: none;
+}

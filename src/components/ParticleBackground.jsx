@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
-import * as THREE from 'three';
+import { useEffect, useRef } from "react";
+import * as THREE from "three";
 
 function ParticleBackground({ isDarkMode }) {
   const mountRef = useRef(null);
@@ -20,23 +20,23 @@ function ParticleBackground({ isDarkMode }) {
 
     for (let i = 0; i < count * 3; i++) {
       positions[i] = (Math.random() - 0.5) * 10;
-      colors[i] = isDarkMode ? 1 : 0.01; 
+      colors[i] = isDarkMode ? 1 : 0.01;
     }
 
-    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-    geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+    geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+    geometry.setAttribute("color", new THREE.BufferAttribute(colors, 3));
 
     const material = new THREE.PointsMaterial({
-      size: 0.001, 
+      size: 0.001,
       vertexColors: true,
-      opacity: isDarkMode ? 0.07 : 0.2, 
+      opacity: isDarkMode ? 0.07 : 0.2,
       transparent: true,
     });
     const points = new THREE.Points(geometry, material);
 
     scene.add(points);
 
-    camera.position.z = width > 800 ? 5 : 10; 
+    camera.position.z = width > 800 ? 5 : 10;
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(width, height);
     mountRef.current.appendChild(renderer.domElement);
@@ -49,11 +49,11 @@ function ParticleBackground({ isDarkMode }) {
       camera.updateProjectionMatrix();
       renderer.setSize(width, height);
 
-      material.size = width > 800 ? 0.001 : 0.003; 
-      camera.position.z = width > 800 ? 5 : 10; 
+      material.size = width > 800 ? 0.001 : 0.003;
+      camera.position.z = width > 800 ? 5 : 10;
     };
 
-    window.addEventListener('resize', handleWindowResize);
+    window.addEventListener("resize", handleWindowResize);
 
     const animate = function () {
       requestAnimationFrame(animate);
@@ -67,7 +67,7 @@ function ParticleBackground({ isDarkMode }) {
 
     return () => {
       cancelAnimationFrame(animate);
-      window.removeEventListener('resize', handleWindowResize);
+      window.removeEventListener("resize", handleWindowResize);
       mountRef.current.removeChild(renderer.domElement);
     };
   }, [isDarkMode]);
@@ -76,7 +76,3 @@ function ParticleBackground({ isDarkMode }) {
 }
 
 export default ParticleBackground;
-
-
-
-

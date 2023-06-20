@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function HomeContent() {
   return (
@@ -11,7 +11,9 @@ function HomeContent() {
         <div>
           <p className="font-roboto-mono font-light leading-[1.8] text-sm md:text-md lg:text-lg">
             I'm an emerging developer from Brisbane, Australia, passionate about
-            building dynamic and intuitive web applications.<br /><br />
+            building dynamic and intuitive web applications.
+            <br />
+            <br />
             Here you'll find a selection of my most recent work, projects I've
             built with dedication and a love for development.
           </p>
