@@ -30,6 +30,8 @@
 
 ## Wireframes designed with Figma
 
+<br />
+
 <div align="center">
   <img src="./src/assets/wireframe-desktop-home.png" width="400"><br>
   <img src="./src/assets/wireframe-desktop-projects.png" width="400"><br>
