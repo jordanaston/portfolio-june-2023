@@ -66,11 +66,8 @@ function Info({ isDarkMode }) {
           <p className="font-regular text-lg">🛠 Tools</p>
           <br />
           <p>
-            I'm currently coding with: <br />
-            Javascript | MERN | Python | Flask | HTML | CSS | Tailwind <br />
-            <br />
-            I'm always learning and currently developing skills in: <br />
-            Photoshop | Illustrator | Bootstrap <br />
+            I'm currently coding with: <br /><br />
+            HTML | CSS | Javascript | MongoDB | Express.js | React | Node.js | Python | Flask | SQL | PostgreSQL | Tailwind | Figma | Postman | Git | VS Code <br />
             <br />
             <br />
             <br />
