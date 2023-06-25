@@ -3,7 +3,7 @@ import PlantAppImage from "../assets/plantapp-image.png";
 import PlantAppCollection from "../assets/plantapp-collection.png";
 import PlantAppInfo from "../assets/plantapp-info.png";
 import VinylDataImage from "../assets/vinyl-data-image.png";
-import VinylDataERD from "../assets/vinyl-data-ERD.png";
+import VinylDataERD from "../assets/vinyl-data-erd.png";
 import WeatherAppCold from "../assets/weather-app-cold.png";
 import WeatherAppWarm from "../assets/weather-app-warm.png";
 
