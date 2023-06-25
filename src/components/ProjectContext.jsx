@@ -1,6 +1,11 @@
 import React from "react";
 import PlantAppImage from "../assets/plantapp-image.png";
+import PlantAppCollection from "../assets/plantapp-collection.png";
+import PlantAppInfo from "../assets/plantapp-info.png";
 import VinylDataImage from "../assets/vinyl-data-image.png";
+import VinylDataERD from "../assets/vinyl-data-ERD.png";
+import WeatherAppCold from "../assets/weather-app-cold.png";
+import WeatherAppWarm from "../assets/weather-app-warm.png";
 
 // List of project items
 const projectItems = [
@@ -34,6 +39,24 @@ const projectItems = [
     paragraphs: [],
   },
   {
+    id: "weather-forecast-app",
+    details: "2023 / Personal Project",
+    description: "Weather Forecast App",
+    stack: "Javascript | React | Tailwind",
+    image: WeatherAppCold,
+    githubRepo: "https://github.com/jordanaston/weather-forecast-app-react",
+    deployedSite: "https://darlingsable.netlify.app/",
+    paraImages: [
+      { src: WeatherAppCold, position: 1 },
+      { src: WeatherAppWarm, position: 2 },
+    ],
+    paragraphs: [
+      "A weather forecast web application that provides real-time weather data using the OpenWeatherMap API. Includes features such hourly and daily forecasts, current temperature, 'feels like' temperature, humidity levels, wind speed, sunrise and sunset times and displays information about the date & time of the searched location. Other features include a geo-location search button, metric / imperial conversion and the high/ low temperatures of the day.",
+      "This app was built using JavaScript, React, and Tailwind and deployed with Netlify. Luxon was utilized for reliable and accurate handling of date and time data. Toastify was employed to deliver sleek, responsive notifications to users, ensuring an interactive user experience. These packages, paired with suitable icons from iconscout.com, make the project a simple but effective solution for a weather forecast app.",
+      "",
+    ],
+  },
+  {
     id: "vinyl-data-api",
     details: "2023 / Coder Academy",
     description: "Vinyl Data - API Webserver",
@@ -43,7 +66,7 @@ const projectItems = [
     deployedSite: "",
     paraImages: [
       { src: VinylDataImage, position: 1 },
-      { src: VinylDataImage, position: 2 },
+      { src: VinylDataERD, position: 2 },
     ],
     paragraphs: [
       "This project presents a robust RESTful API, created using Flask, for managing and cataloguing vinyl record collections. The tool is aimed at private users like vinyl collectors and DJs, helping them organize, search and maintain records, enhancing ease-of-use and efficiency. It enables users to quickly identify album details, track specifics such as tempo or BPM, key, and RPM, aiding DJs during live performances and listeners in their leisure. The API is equipped with full CRUD capabilities, allowing the user to seamlessly create, read, update, and delete records and tracks from their database.",
@@ -60,14 +83,14 @@ const projectItems = [
     githubRepo: "https://github.com/jordanaston/T1A3-terminal-application",
     deployedSite: "",
     paraImages: [
-      { src: PlantAppImage, position: 1 },
-      { src: PlantAppImage, position: 3 },
+      { src: PlantAppCollection, position: 1 },
+      { src: PlantAppInfo, position: 3 },
     ],
     paragraphs: [
-      "PlantApp is a Python-based terminal application designed to help users care for their indoor house-plants. The application supports 15 varieties of popular indoor house-plants, allowing users to create a custom collection of their plants. Each plant comes with data on watering frequency, re-potting frequency, and ideal location, enabling the app to generate personalized care recommendations.",
+      "PlantApp is a Python-based terminal application designed to help users care for their indoor house-plants. The application supports a variety of popular indoor house-plants, allowing users to create their own custom collection. Each plant comes with data on watering frequency, re-potting frequency, and ideal location, enabling the app to generate personalized care recommendations.",
       "The primary function of PlantApp is to solicit user input about each plant in their collection, such as when the plant was last watered and re-potted, and whether it is situated near a window. Based on this input, the app compares the users care routine to the data stored within the app, producing tailored advice to improve plant care. The user interface is intuitive, allowing easy addition and removal of plants to the collection.",
       "In addition to its core functionality, PlantApp employs the Pretty Table module to present the users plant collection in an organized, visually appealing format. This module also enhances the display of the apps care recommendations, which are based on a comparison of user input and plant data.",
-      "The development of PlantApp demonstrates proficient use of Python to design, implement, and test a terminal application. It showcases the ability to manage user input, interact with the file system, and utilize developer tools effectively. Please note that the information regarding water frequency, re-pot frequency, and location may not be entirely accurate due to the assignments constraints.",
+      "The development of PlantApp demonstrates proficient use of Python to design, implement, and test a terminal application. It showcases the ability to manage user input, interact with the stored data, and utilize developer tools effectively. Please note that the information regarding water frequency, re-pot frequency, and location may not be entirely accurate as the purpose of the project was to learn how to build a terminal app.",
     ],
   },
 ];
