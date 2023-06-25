@@ -31,11 +31,11 @@
 ## Wireframes designed with Figma
 
 <div align="center">
-  <img src="./src/assets/wireframe-desktop-home.png" width="400"><br>
-  <img src="./src/assets/wireframe-desktop-projects.png" width="400"><br>
-  <img src="./src/assets/wireframe-desktop-info.png" width="400"><br>
-  <img src="./src/assets/wireframe-mobile-home.png" width="150"><br>
-  <img src="./src/assets/wireframe-mobile-projects.png" width="150"><br>
-  <img src="./src/assets/wireframe-mobile-info.png" width="150"><br>
+  <img src="src/assets/wireframe-desktop-home.png" width="400"><br>
+  <img src="src/assets/wireframe-desktop-projects.png" width="400"><br>
+  <img src="src/assets/wireframe-desktop-info.png" width="400"><br>
+  <img src="src/assets/wireframe-mobile-home.png" width="150"><br>
+  <img src="src/assets/wireframe-mobile-projects.png" width="150"><br>
+  <img src="src/assets/wireframe-mobile-info.png" width="150"><br>
 </div>
 
