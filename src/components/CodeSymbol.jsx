@@ -9,7 +9,7 @@ function CodeSymbol({ isDarkMode }) {
 
   // Styles for the symbol - changes the scale of the symbol based on hover state
   const symbolStyle = {
-    transform: isHovered ? "scale(1.10)" : "scale(1)", // scales the symbol up slightly if it's being hovered over
+    transform: isHovered ? "scale(1.10)" : "scale(1)", // scales the symbol up slightly if it's being hovered 
     transition: "transform 0.3s ease", // smooth transition for the scale change
     cursor: "pointer", // makes the cursor appear as a pointer when hovering over the symbol
     display: "inline-block", // allows the symbol to sit on the same line as other content
