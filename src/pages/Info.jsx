@@ -52,7 +52,9 @@ function Info({ isDarkMode }) {
             and performance, which is where I built my technical skills and
             discovered my creativity. I gained practical experience and learned
             a lot about sound, complementing this knowledge with studies in
-            audio engineering and music production. Over time, my interest in
+            audio engineering and music production.<br /><br /> 
+            
+            Over time, my interest in
             technology has guided me towards a career in software development.
             After dedicating some time to self-learning, I further solidified my
             skills with a Diploma in Information Technology from Coder Academy.
