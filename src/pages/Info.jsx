@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import Resume from "../assets/Jordan Aston - Resume.pdf";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -82,6 +83,11 @@ function Info({ isDarkMode }) {
             0411 511 185 <br />
             jordanaston93@gmail.com <br />
           </p>
+          <br />
+          <a href={Resume} download>
+            Download My Resume ↓
+          </a>
+
 
           {/* Contact form for user to fill in and submit to send an email */}
           <form
