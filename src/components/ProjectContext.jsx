@@ -6,17 +6,18 @@ import VinylDataImage from "../assets/vinyl-data-image.png";
 import VinylDataERD from "../assets/vinyl-data-erd.png";
 import WeatherAppCold from "../assets/weather-app-cold.png";
 import WeatherAppWarm from "../assets/weather-app-warm.png";
+import VanVoyageImage from "../assets/van-voyage-image.png";
 
 // List of project items
 const projectItems = [
   {
     id: "full-stack-app", // Identifier for the project
     details: "2023 / Coder Academy", // Additional details about the project
-    description: "Full Stack Application", // Project description
-    stack: "MERN Stack | Tailwind", // Tech stack used in the project
-    image: "", // Image of the project, if any
-    githubRepo: "", // Link to the project's GitHub repository
-    deployedSite: "", // Link to the deployed project
+    description: "Van Voyage - Full Stack Application", // Project description
+    stack: "MERN Stack | Tailwind CSS", // Tech stack used in the project
+    image: VanVoyageImage, // Image of the project, if any
+    githubRepo: "https://github.com/van-voyagers/T3A2-A-van-voyage-docs", // Link to the project's GitHub repository
+    deployedSite: "https://van-voyage.netlify.app/", // Link to the deployed project
     paraImages: [
       // Images to display in the project description paragraphs
       { src: "", position: 1 },
@@ -28,7 +29,7 @@ const projectItems = [
     id: "music-player-app",
     details: "2023 / Personal Project",
     description: "Music Player App",
-    stack: "Javascript | React | Tailwind",
+    stack: "Javascript | React | Tailwind CSS",
     image: "",
     githubRepo: "",
     deployedSite: "",
@@ -42,7 +43,7 @@ const projectItems = [
     id: "weather-forecast-app",
     details: "2023 / Personal Project",
     description: "Weather Forecast App",
-    stack: "Javascript | React | Tailwind",
+    stack: "Javascript | React | Tailwind CSS",
     image: WeatherAppCold,
     githubRepo: "https://github.com/jordanaston/weather-forecast-app-react",
     deployedSite: "https://darlingsable.netlify.app/",
