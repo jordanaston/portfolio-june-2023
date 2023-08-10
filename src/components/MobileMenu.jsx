@@ -17,12 +17,12 @@ function MobileMenu({ isDarkMode }) {
   // Styling for the links in the mobile menu.
   const linkStyles = {
     fontSize: "1.5rem",
-    transition: "font-size 0.3s",
+    transition: "font-size 0.1s",
   };
 
   // Additional styling for the links in the mobile menu when they're hovered over.
   const linkHoverStyles = {
-    fontSize: "1.7rem",
+    fontSize: "1.6rem",
   };
 
   return (

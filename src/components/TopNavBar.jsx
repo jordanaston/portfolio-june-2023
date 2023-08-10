@@ -20,7 +20,7 @@ function TopNavBar({ isDarkMode }) {
       hoveredLink === path && location.pathname !== path
         ? "scale(1.12)"
         : "scale(1)",
-    transition: "color 0.3s ease, transform 0.3s ease",
+    transition: "color 0.3s ease, transform 0.1s ease",
   });
 
   return (

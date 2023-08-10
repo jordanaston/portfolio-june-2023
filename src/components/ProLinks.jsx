@@ -10,7 +10,7 @@ function ProLinks({ isDarkMode }) {
   // Function to style link based on its path. It changes the style when the link is hovered.
   const linkStyle = (path) => ({
     display: "inline-block",
-    transition: "color 0.3s ease, transform 0.3s ease",
+    transition: "color 0.3s ease, transform 0.1s ease",
     transform: hoveredLink === path ? "scale(1.1)" : "scale(1)",
   });
 

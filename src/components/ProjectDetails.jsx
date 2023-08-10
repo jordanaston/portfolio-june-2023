@@ -32,7 +32,7 @@ function ProjectDetails({ isDarkMode }) {
         <div className="flex flex-wrap justify-center items-center font-roboto-mono font-light text-lg">
           <button
             onClick={handleGoBack}
-            className="transition duration-300 ease-in-out transform hover:scale-105 mr-3"
+            className="transition duration-100 ease-in-out transform hover:scale-110 mr-3"
           >
             ← Back
           </button>
@@ -65,7 +65,7 @@ function ProjectDetails({ isDarkMode }) {
                 href={projectDetails.githubRepo}
                 target="_blank"
                 rel="noreferrer"
-                className="transition duration-300 ease-in-out transform hover:scale-105"
+                className="transition duration-100 ease-in-out transform hover:scale-110"
               >
                 View Github Repo ➚
               </a>
@@ -75,7 +75,7 @@ function ProjectDetails({ isDarkMode }) {
                 href={projectDetails.deployedSite}
                 target="_blank"
                 rel="noreferrer"
-                className="transition duration-300 ease-in-out transform hover:scale-105"
+                className="transition duration-100 ease-in-out transform hover:scale-110"
               >
                 View Deployed Site ➚
               </a>
