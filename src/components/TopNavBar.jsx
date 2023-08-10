@@ -15,7 +15,7 @@ function TopNavBar({ isDarkMode }) {
   const linkStyle = (path) => ({
     display: "inline-block",
     paddingBottom: "0.3px",
-    borderBottom: location.pathname === path ? "2px solid" : "none",
+    borderBottom: location.pathname === path ? "1px solid" : "none",
     transform:
       hoveredLink === path && location.pathname !== path
         ? "scale(1.12)"
