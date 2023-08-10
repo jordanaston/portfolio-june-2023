@@ -7,6 +7,8 @@ import VinylDataERD from "../assets/vinyl-data-erd.png";
 import WeatherAppCold from "../assets/weather-app-cold.png";
 import WeatherAppWarm from "../assets/weather-app-warm.png";
 import VanVoyageImage from "../assets/van-voyage-image.png";
+import VanVoyageLogin from "../assets/van-voyage-login-image.png";
+import VanVoyageMobile from "../assets/van-voyage-mobile-image.png";
 
 // List of project items
 const projectItems = [
@@ -20,10 +22,14 @@ const projectItems = [
     deployedSite: "https://van-voyage.netlify.app/", // Link to the deployed project
     paraImages: [
       // Images to display in the project description paragraphs
-      { src: "", position: 1 },
-      { src: "", position: 2 },
+      { src: VanVoyageLogin, position: 1 },
+      { src: VanVoyageMobile, position: 2 },
     ],
-    paragraphs: [], // Paragraphs of project description
+    paragraphs: [
+      "Van Voyage is a project-based web application developed to provide an organized system for booking and reviewing retro, refurbished camper-vans. Central features of the platform include real-time availability checks, user registration/ on-boarding and profile management, a straightforward booking mechanism, and an interactive review system where users can share their experiences after booking the vans.",
+      "Built on the MERN stack, the application uses MongoDB, Express.js, React, and Node.js. With the frontend deployed on Netlify and styled using Tailwind CSS, it integrates with the backend on Render which interfaces with MongoDB Atlas for data storage and retrieval. Users have the capability to create accounts, adjust profile details, explore individual van attributes, verify real-time availability, finalize bookings, and subsequently share feedback through reviews. Administrative tasks, such as managing users, van details, bookings, and reviews, are handled through Postman.",
+      "Notable packages integrated are Axios (for streamlined data interactions), jsonwebtoken (to ensure secure user sessions), and bcrypt (for enhanced password security). For direct user interactions, react-calendar offers an intuitive interface for availability verification, react-star-ratings aids in capturing user feedback post-booking, and react-responsive-carousel facilitates a dynamic display of van images.",
+    ], // Paragraphs of project description
   },
   {
     id: "music-player-app",
