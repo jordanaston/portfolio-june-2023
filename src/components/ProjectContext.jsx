@@ -9,9 +9,24 @@ import WeatherAppWarm from "../assets/weather-app-warm.png";
 import VanVoyageImage from "../assets/van-voyage-image.png";
 import VanVoyageLogin from "../assets/van-voyage-login-image.png";
 import VanVoyageMobile from "../assets/van-voyage-mobile-image.png";
+import NbmMobileAppImage from "../assets/nbm-mobile-app-image.png";
 
 // List of project items
 const projectItems = [
+  {
+    id: "nbm-forum-mobile-app",
+    details: "2023 / Internship Project",
+    description: "NBM Forum Mobile App",
+    stack: "Typescript | React Native | Nativewind",
+    image: NbmMobileAppImage,
+    githubRepo: "https://github.com/jordanaston/nbm-forum",
+    deployedSite: "",
+    paraImages: [
+      { src: "", position: 1 },
+      { src: "", position: 2 },
+    ],
+    paragraphs: [],
+  },
   {
     id: "full-stack-app", // Identifier for the project
     details: "2023 / Coder Academy", // Additional details about the project
@@ -30,20 +45,6 @@ const projectItems = [
       "Built on the MERN stack, the application uses MongoDB, Express.js, React, and Node.js. With the frontend deployed on Netlify and styled using Tailwind CSS, it integrates with the backend on Render which interfaces with MongoDB Atlas for data storage and retrieval. Users have the capability to create accounts, adjust profile details, explore individual van attributes, verify real-time availability, finalize bookings, and subsequently share feedback through reviews. Administrative tasks, such as managing users, van details, bookings, and reviews, are handled through Postman.",
       "Notable packages integrated are Axios (for streamlined data interactions), jsonwebtoken (to ensure secure user sessions), and bcrypt (for enhanced password security). For direct user interactions, react-calendar offers an intuitive interface for availability verification, react-star-ratings aids in capturing user feedback post-booking, and react-responsive-carousel facilitates a dynamic display of van images.",
     ], // Paragraphs of project description
-  },
-  {
-    id: "music-player-app",
-    details: "2023 / Personal Project",
-    description: "Music Player App",
-    stack: "Javascript | React | Tailwind CSS",
-    image: "",
-    githubRepo: "",
-    deployedSite: "",
-    paraImages: [
-      { src: "", position: 1 },
-      { src: "", position: 2 },
-    ],
-    paragraphs: [],
   },
   {
     id: "weather-forecast-app",

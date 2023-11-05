@@ -20,7 +20,7 @@ function ProjectTile({ projectId, isDarkMode }) {
   return (
     <div>
       <Link to={`/projects/${projectId}`}>
-      <div className={`m-4 w-80 h-60 hover:scale-105 border border-${modeColor} transition-transform duration-100`}>
+      <div className={`m-4 w-80 h-60 hover:scale-105 transition-transform duration-100`}>
           {/* Check if the project has an image, if not render 'In Development...' */}
           {project.image ? (
             <img src={project.image} alt="Project Image" />

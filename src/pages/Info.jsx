@@ -70,7 +70,7 @@ function Info({ isDarkMode }) {
           <br />
           <p>
             I'm currently coding with: <br /><br />
-            HTML | CSS | Javascript | MongoDB | Express.js | React | Node.js | Python | Flask | SQL | PostgreSQL | Tailwind | Figma | Postman | Git | VS Code <br />
+            Typescript | Javascript | React | React Native | React Query | Zustand | HTML | CSS | MongoDB | Express.js | Node.js | Python | Flask  | SQL | PostgreSQL | JSON | Tailwind CSS | Formik & Yup | Axios |  Figma | Adobe XD | VS Code | Git | Postman | Flipper | DBeaver | XCode <br />
             <br />
             <br />
             <br />
