@@ -11,7 +11,7 @@ function HomeContent() {
         <div>
           <p className="font-roboto-mono font-light leading-[1.8] text-sm md:text-md lg:text-lg">
             I'm a developer from Brisbane, Australia, passionate about
-            building dynamic and intuitive web and mobile applications.
+            building dynamic web and mobile applications.
             <br />
             <br />
             Here you'll find a selection of my most recent work, projects I've
