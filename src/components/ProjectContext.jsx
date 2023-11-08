@@ -10,6 +10,7 @@ import VanVoyageImage from "../assets/van-voyage-image.png";
 import VanVoyageLogin from "../assets/van-voyage-login-image.png";
 import VanVoyageMobile from "../assets/van-voyage-mobile-image.png";
 import NbmMobileAppImage from "../assets/nbm-mobile-app-image.png";
+import UniswapBlockchainImage from "../assets/uniswap-blockchain-app-image.png";
 
 // List of project items
 const projectItems = [
@@ -21,6 +22,20 @@ const projectItems = [
     image: NbmMobileAppImage,
     githubRepo: "https://github.com/jordanaston/nbm-forum",
     deployedSite: "",
+    paraImages: [
+      { src: "", position: 1 },
+      { src: "", position: 2 },
+    ],
+    paragraphs: [],
+  },
+  {
+    id: "uniswap-blockchain-app",
+    details: "2023 / Personal Project",
+    description: "Uniswap Blockchain Web App",
+    stack: "Next.js | Typescript | Solidity | Sanity",
+    image: UniswapBlockchainImage,
+    githubRepo: "https://github.com/jordanaston/uniswap-blockchain-webapp",
+    deployedSite: "https://uniswap-blockchain-webapp.vercel.app/",
     paraImages: [
       { src: "", position: 1 },
       { src: "", position: 2 },
