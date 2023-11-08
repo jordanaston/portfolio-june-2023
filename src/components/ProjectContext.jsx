@@ -11,8 +11,11 @@ import VanVoyageLogin from "../assets/van-voyage-login-image.png";
 import VanVoyageMobile from "../assets/van-voyage-mobile-image.png";
 import NbmMobileAppImage from "../assets/nbm-mobile-app-image.png";
 import UniswapBlockchainImage from "../assets/uniswap-blockchain-app-image.png";
+import NbmAppImage1 from "../assets/nbm-app-image-1.png";
+import NbmAppImage2 from "../assets/nbm-app-image-2.png";
+import UniswapMetamask from "../assets/uniswap-metamask.png";
+import UniswapModal from "../assets/uniswap-modal.png";
 
-// List of project items
 const projectItems = [
   {
     id: "nbm-forum-mobile-app",
@@ -23,10 +26,14 @@ const projectItems = [
     githubRepo: "https://github.com/jordanaston/nbm-forum",
     deployedSite: "",
     paraImages: [
-      { src: "", position: 1 },
-      { src: "", position: 2 },
+      { src: NbmAppImage1, position: 1 },
+      { src: NbmAppImage2, position: 2 },
     ],
-    paragraphs: [],
+    paragraphs: [
+      "The NBM Forum is a mobile application serving as a communal space where users can initiate discussions, share insights, and network within a social interface inspired by Reddit for designers and developers.",
+      "Developed using a modern tech stack that includes Typescript, React Native, and Nativewind, the app includes a login and account creation screen, gathering details such as name, email, phone, address, and password, along with the ability to upload a profile picture to an AWS S3 bucket. The main feed integrates lazy loading for seamless browsing, with functionalities to like, comment on posts, and reply to comments. A tag filter carousel offers post filtering by tags fetched from the API. New posts can be created with tag assignments, and the settings screen provides straightforward options for account management including logout.",
+      "This application was built during an internship program at Moonward Apps, Brisbane and was designed as a coding challenge for the interns. The designs and backend were created by Moonward and we were given the task of developing the frontend using tools such as React Query, Zustand, Formik/ Yup, Google Places Auto-Complete API and Async Storage to name a few.",
+    ],
   },
   {
     id: "uniswap-blockchain-app",
@@ -37,21 +44,24 @@ const projectItems = [
     githubRepo: "https://github.com/jordanaston/uniswap-blockchain-webapp",
     deployedSite: "https://uniswap-blockchain-webapp.vercel.app/",
     paraImages: [
-      { src: "", position: 1 },
-      { src: "", position: 2 },
+      { src: UniswapMetamask, position: 1 },
+      { src: UniswapModal, position: 2 },
     ],
-    paragraphs: [],
+    paragraphs: [
+      "This Uniswap Blockchain Web App Clone is a crypto exchange interface built with Next.js, Typescript, Solidity and Sanity replicating some of Uniswap’s core features such as connecting your metamask wallet, sending tokens on-chain and seeing a live history of the transactions update in real-time. It's deployed on Vercel, utilizing Ethereum's Sepolia Testnet for token swapping.",
+      "Solidity supports the app's smart contracts, facilitating secure transactions on the testnet. The database leverages Sanity, providing a structured content system for users and transactions. Users must acquire Sepolia tokens to test the exchange features.",
+      "Incorporating key packages such as ethers for Ethereum blockchain interactions, react-modal for UI dialogues, react-spinners for dynamic feedback during loading states and hardhat to facilitate smart contract development and testing, the app's functionality is minimal but touches on the foundations of blockchain development.",
+    ],
   },
   {
-    id: "full-stack-app", // Identifier for the project
-    details: "2023 / Coder Academy", // Additional details about the project
-    description: "Van Voyage - Full Stack Application", // Project description
-    stack: "MERN Stack | Tailwind CSS", // Tech stack used in the project
-    image: VanVoyageImage, // Image of the project, if any
-    githubRepo: "https://github.com/van-voyagers/T3A2-A-van-voyage-docs", // Link to the project's GitHub repository
-    deployedSite: "https://van-voyage.netlify.app/", // Link to the deployed project
+    id: "full-stack-app",
+    details: "2023 / Coder Academy",
+    description: "Van Voyage - Full Stack Application",
+    stack: "MERN Stack | Tailwind CSS",
+    image: VanVoyageImage,
+    githubRepo: "https://github.com/van-voyagers/T3A2-A-van-voyage-docs",
+    deployedSite: "https://van-voyage.netlify.app/",
     paraImages: [
-      // Images to display in the project description paragraphs
       { src: VanVoyageLogin, position: 1 },
       { src: VanVoyageMobile, position: 2 },
     ],
@@ -59,7 +69,7 @@ const projectItems = [
       "Van Voyage is a project-based web application developed to provide an organized system for booking and reviewing retro, refurbished camper-vans. Central features of the platform include real-time availability checks, user registration/ on-boarding and profile management, a straightforward booking mechanism, and an interactive review system where users can share their experiences after booking the vans.",
       "Built on the MERN stack, the application uses MongoDB, Express.js, React, and Node.js. With the frontend deployed on Netlify and styled using Tailwind CSS, it integrates with the backend on Render which interfaces with MongoDB Atlas for data storage and retrieval. Users have the capability to create accounts, adjust profile details, explore individual van attributes, verify real-time availability, finalize bookings, and subsequently share feedback through reviews. Administrative tasks, such as managing users, van details, bookings, and reviews, are handled through Postman.",
       "Notable packages integrated are Axios (for streamlined data interactions), jsonwebtoken (to ensure secure user sessions), and bcrypt (for enhanced password security). For direct user interactions, react-calendar offers an intuitive interface for availability verification, react-star-ratings aids in capturing user feedback post-booking, and react-responsive-carousel facilitates a dynamic display of van images.",
-    ], // Paragraphs of project description
+    ],
   },
   {
     id: "weather-forecast-app",
@@ -118,7 +128,6 @@ const projectItems = [
   },
 ];
 
-// Create a context for the project items
 const ProjectContext = React.createContext(projectItems);
 
 export default ProjectContext;

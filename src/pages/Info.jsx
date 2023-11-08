@@ -5,17 +5,13 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 function Info({ isDarkMode }) {
-  // Determine the mode color based on whether Dark Mode is active or not.
   const modeColor = isDarkMode ? "dark-mode-color" : "light-mode-color";
 
-  // useRef hook is used to access the form DOM element directly and manipulate it.
   const form = useRef();
 
-  // A function to send an email when the form is submitted.
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Send the form data through emailjs service.
     emailjs
       .sendForm(
         import.meta.env.VITE_APP_EMAIL_SERVICE_ID,
@@ -27,7 +23,7 @@ function Info({ isDarkMode }) {
         (result) => {
           console.log(result.text);
           alert("Email successfully sent!");
-          form.current.reset(); // Reset the form after email has been sent.
+          form.current.reset();
         },
         (error) => {
           console.log(error.text);
@@ -44,7 +40,6 @@ function Info({ isDarkMode }) {
         className={`justify-center flex-grow overflow-scroll text-${modeColor}`}
       >
         <div className="font-roboto-mono font-light px-8 pt-8 leading-[1.8] sm:w-[80%] sm:mx-auto lg:w-[55%] lg:mx-auto sm:pt-10 md:pt-20">
-          {/* Paragraphs containing specific information about the user */}
           <p className="font-regular text-lg">💻 About</p>
           <br />
           <p>
@@ -52,14 +47,14 @@ function Info({ isDarkMode }) {
             and performance, which is where I built my technical skills and
             discovered my creativity. I gained practical experience and learned
             a lot about sound, complementing this knowledge with studies in
-            audio engineering and music production.<br /><br /> 
-            
-            Over time, my interest in
-            technology has guided me towards a career in software development.
-            After dedicating some time to self-learning, I further solidified my
-            skills with a Diploma in Information Technology from Coder Academy.
-            Today, I channel my blend of experiences into building engaging and
-            impactful web experiences.
+            audio engineering and music production.
+            <br />
+            <br />
+            Over time, my interest in technology has guided me towards a career
+            in software development. After dedicating some time to
+            self-learning, I further solidified my skills with a Diploma in
+            Information Technology from Coder Academy. Today, I channel my blend
+            of experiences into building engaging and impactful web experiences.
             <br />
             <br />
             <br />
@@ -69,8 +64,13 @@ function Info({ isDarkMode }) {
           <p className="font-regular text-lg">🛠 Tools</p>
           <br />
           <p>
-            I'm currently coding with: <br /><br />
-            Typescript | Javascript | React | React Native | React Query | Zustand | HTML | CSS | MongoDB | Express.js | Node.js | Next.js | Solidity | Python | Flask  | SQL | PostgreSQL | JSON | Tailwind CSS | Formik & Yup | Axios |  Figma | Adobe XD | VS Code | Git | Postman | Flipper | DBeaver | XCode <br />
+            I'm currently coding with: <br />
+            <br />
+            Typescript | Javascript | React | React Native | React Query |
+            Zustand | HTML | CSS | MongoDB | Express.js | Node.js | Next.js |
+            Solidity | Python | Flask | SQL | PostgreSQL | JSON | Tailwind CSS |
+            Formik & Yup | Axios | Figma | Adobe XD | VS Code | Git | Postman |
+            Flipper | DBeaver | XCode <br />
             <br />
             <br />
             <br />
@@ -90,14 +90,11 @@ function Info({ isDarkMode }) {
             Download My Resume ↓
           </a>
 
-
-          {/* Contact form for user to fill in and submit to send an email */}
           <form
             ref={form}
             onSubmit={sendEmail}
             className={`mt-12 mb-12 font-roboto-mono font-light text-lg border-${modeColor} bg-transparent outline-none`}
           >
-            {/* The form includes fields for name, email, phone number, and a message */}
             <label htmlFor="from_name" className="block">
               Name
             </label>

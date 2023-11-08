@@ -2,16 +2,12 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 function TopNavBar({ isDarkMode }) {
-  // Determine the mode color based on whether Dark Mode is active or not.
   const modeColor = isDarkMode ? "dark-mode-color" : "light-mode-color";
 
-  // Use location hook from react-router-dom to get the current path.
   const location = useLocation();
 
-  // State to keep track of currently hovered link.
   const [hoveredLink, setHoveredLink] = useState(null);
 
-  // Function to style link based on its path. It changes the style when the link is active or hovered.
   const linkStyle = (path) => ({
     display: "inline-block",
     paddingBottom: "0.3px",
@@ -28,7 +24,6 @@ function TopNavBar({ isDarkMode }) {
       className={`text-${modeColor} text-xl md:mt-4 md:mr-5 lg:mr-7 lg:mt-4 lg:text-xl md:font-light`}
     >
       <ul className="flex space-x-6">
-        {/* Links to different routes with their styles being dynamically set */}
         <li>
           <Link
             to="/"
