@@ -152,10 +152,6 @@ function Info({ isDarkMode }) {
   );
 }
 
-Info.propTypes = {
-  isDarkMode: PropTypes.bool.isRequired,
-};
-
 export default Info;
 
 // My background until now has been rooted in live-sound engineering
