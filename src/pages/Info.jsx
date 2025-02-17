@@ -66,8 +66,8 @@ function Info({ isDarkMode }) {
             Currently coding with: <br />
             <br />
             React | React Native | Typescript | Javascript | Tailwind CSS |
-            Chakra | Figma MongoDB | Express.js | Koa | Node.js | Python | Flask
-            | SQL | PostgreSQL VS Code | Git | Postman
+            Chakra | Figma | MongoDB | Express.js | Koa | Node.js | Python | Flask
+            | SQL | PostgreSQL | VS Code | Git | Postman
             <br />
             <br />
             <br />
