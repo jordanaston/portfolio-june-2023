@@ -65,9 +65,9 @@ function Info({ isDarkMode }) {
           <p>
             Currently coding with: <br />
             <br />
-            React | React Native | Typescript | Javascript Tailwind CSS | Chakra
-            | Figma MongoDB | Express.js | Koa | Node.js Python | Flask | SQL |
-            PostgreSQL VS Code | Git | Postman
+            React | React Native | Typescript | Javascript | Tailwind CSS |
+            Chakra | Figma MongoDB | Express.js | Koa | Node.js | Python | Flask
+            | SQL | PostgreSQL VS Code | Git | Postman
             <br />
             <br />
             <br />
@@ -151,6 +151,10 @@ function Info({ isDarkMode }) {
     </div>
   );
 }
+
+Info.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+};
 
 export default Info;
 
