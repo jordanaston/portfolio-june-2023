@@ -43,18 +43,17 @@ function Info({ isDarkMode }) {
           <p className="font-regular text-lg">💻 About</p>
           <br />
           <p>
-            My background until now has been rooted in live-sound engineering
-            and performance, which is where I built my technical skills and
-            discovered my creativity. I gained practical experience and learned
-            a lot about sound, complementing this knowledge with studies in
-            audio engineering and music production.
+            Keen software developer proficient in developing dynamic web and
+            mobile applications throughout all stages of the project lifecycle.
+            Comprehensive knowledge of modern development tools and languages,
+            coupled with the ability to write clean, efficient, and maintainable
+            code.
             <br />
             <br />
-            Over time, my interest in technology has guided me towards a career
-            in software development. After dedicating some time to
-            self-learning, I further solidified my skills with a Diploma in
-            Information Technology from Coder Academy. Today, I channel my blend
-            of experiences into building engaging and impactful web experiences.
+            Strong aptitude for embracing new technologies and an inherent knack
+            for problem-solving. Ability to collaborate within a team
+            environment and contribute to a culture of shared ideas and
+            constructive feedback.
             <br />
             <br />
             <br />
@@ -64,13 +63,12 @@ function Info({ isDarkMode }) {
           <p className="font-regular text-lg">🛠 Tools</p>
           <br />
           <p>
-            I'm currently coding with: <br />
+            Currently coding with: <br />
             <br />
-            Typescript | Javascript | React | React Native | React Query |
-            Zustand | HTML | CSS | MongoDB | Express.js | Node.js | Next.js |
-            Solidity | Python | Flask | SQL | PostgreSQL | JSON | Tailwind CSS |
-            Formik & Yup | Axios | Figma | Adobe XD | VS Code | Git | Postman |
-            Flipper | DBeaver | XCode <br />
+            React | React Native | Typescript | Javascript Tailwind CSS | Chakra
+            | Figma MongoDB | Express.js | Koa | Node.js Python | Flask | SQL |
+            PostgreSQL VS Code | Git | Postman
+            <br />
             <br />
             <br />
             <br />
@@ -155,3 +153,21 @@ function Info({ isDarkMode }) {
 }
 
 export default Info;
+
+// My background until now has been rooted in live-sound engineering
+// and performance, which is where I built my technical skills and
+// discovered my creativity. I gained practical experience and learned
+// a lot about sound, complementing this knowledge with studies in
+// audio engineering and music production.
+
+// Over time, my interest in technology has guided me towards a career
+// in software development. After dedicating some time to
+// self-learning, I further solidified my skills with a Diploma in
+// Information Technology from Coder Academy. Today, I channel my blend
+// of experiences into building engaging and impactful web experiences.
+
+// Typescript | Javascript | React | React Native | React Query |
+// Zustand | HTML | CSS | MongoDB | Express.js | Node.js | Next.js |
+// Python | Flask | SQL | PostgreSQL | JSON | Tailwind CSS | Formik &
+// Yup | Axios | Figma | Adobe XD | VS Code | Git | Postman | Flipper |
+// DBeaver | XCode
