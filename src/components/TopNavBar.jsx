@@ -10,7 +10,7 @@ function TopNavBar({ isDarkMode }) {
 
   const linkStyle = (path) => ({
     display: "inline-block",
-    paddingBottom: "0.3px",
+    // paddingBottom: "0.3px",
     borderBottom: location.pathname === path ? "1px solid" : "none",
     transform:
       hoveredLink === path && location.pathname !== path
@@ -21,7 +21,7 @@ function TopNavBar({ isDarkMode }) {
 
   return (
     <div
-      className={`text-${modeColor} text-xl md:mt-4 md:mr-5 lg:mr-7 lg:mt-4 lg:text-xl md:font-light`}
+      className={`text-${modeColor} text-sm md:mt-4 md:mr-5 lg:mr-5 lg:mt-4 md:font-light`}
     >
       <ul className="flex space-x-6">
         <li>
@@ -31,7 +31,7 @@ function TopNavBar({ isDarkMode }) {
             onMouseEnter={() => setHoveredLink("/")}
             onMouseLeave={() => setHoveredLink(null)}
           >
-            Home
+            home
           </Link>
         </li>
         <li>
@@ -41,7 +41,7 @@ function TopNavBar({ isDarkMode }) {
             onMouseEnter={() => setHoveredLink("/projects")}
             onMouseLeave={() => setHoveredLink(null)}
           >
-            Projects
+            projects
           </Link>
         </li>
         <li>
@@ -51,7 +51,7 @@ function TopNavBar({ isDarkMode }) {
             onMouseEnter={() => setHoveredLink("/info")}
             onMouseLeave={() => setHoveredLink(null)}
           >
-            Info
+            info
           </Link>
         </li>
       </ul>

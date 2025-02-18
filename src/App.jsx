@@ -47,7 +47,7 @@ function App() {
             <Route path="/info" element={<Info isDarkMode={isDarkMode} />} />
           </Routes>
 
-          <div className="fixed font-roboto-mono bottom-5 left-7 sm:bottom-6 sm:left-9 md:bottom-7 md:left-10 lg:bottom-8 lg:left-12 lg:text-lg">
+          <div className="fixed font-roboto-mono bottom-5 left-7 sm:bottom-6 sm:left-9 md:bottom-7 md:left-10 lg:bottom-8 lg:left-10 text-sm">
             <button
               className={`mr-5 transition-transform hover:scale-110 text-${modeColor}`}
               onClick={handleLightMode}

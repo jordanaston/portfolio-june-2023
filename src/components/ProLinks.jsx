@@ -13,7 +13,7 @@ function ProLinks({ isDarkMode }) {
 
   return (
     <nav
-      className={`text-${modeColor} text-right font-roboto-mono pb-2 pr-4 mt-3 sm:pb-2 sm:pr-4 lg:pb-3 lg:pr-5 lg:text-md`}
+      className={`text-${modeColor} text-right font-roboto-mono pb-2 pr-4 mt-3 sm:pb-2 sm:pr-4 lg:pb-3 lg:pr-5 text-xs`}
     >
       <ul>
         <li className="mb-2">
