@@ -31,7 +31,7 @@ function TopNavBar({ isDarkMode }) {
             onMouseEnter={() => setHoveredLink("/")}
             onMouseLeave={() => setHoveredLink(null)}
           >
-            home
+            Home
           </Link>
         </li>
         <li>
@@ -41,7 +41,7 @@ function TopNavBar({ isDarkMode }) {
             onMouseEnter={() => setHoveredLink("/projects")}
             onMouseLeave={() => setHoveredLink(null)}
           >
-            projects
+            Projects
           </Link>
         </li>
         <li>
@@ -51,7 +51,7 @@ function TopNavBar({ isDarkMode }) {
             onMouseEnter={() => setHoveredLink("/info")}
             onMouseLeave={() => setHoveredLink(null)}
           >
-            info
+            Info
           </Link>
         </li>
       </ul>
