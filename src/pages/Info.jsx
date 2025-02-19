@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Resume from "../assets/Jordan Aston - Resume.pdf";
 import Header from "../components/Header";
@@ -40,7 +40,7 @@ function Info({ isDarkMode }) {
         className={`justify-center flex-grow overflow-scroll text-${modeColor}`}
       >
         <div className="font-roboto-mono font-light px-8 pt-8 leading-[1.8] sm:w-[80%] sm:mx-auto lg:w-[55%] lg:mx-auto sm:pt-10 md:pt-20">
-          <p className="font-regular text-lg">💻 About</p>
+          <p className="font-regular text-lg">💻 Summary</p>
           <br />
           <p>
             Keen software developer proficient in developing dynamic web and
@@ -66,8 +66,8 @@ function Info({ isDarkMode }) {
             Currently coding with: <br />
             <br />
             React | React Native | Typescript | Javascript | Tailwind CSS |
-            Chakra | Figma | MongoDB | Express.js | Koa | Node.js | Python | Flask
-            | SQL | PostgreSQL | VS Code | Git | Postman
+            Chakra | Figma | MongoDB | Express.js | Koa | Node.js | Python |
+            Flask | SQL | PostgreSQL | VS Code | Git | Postman
             <br />
             <br />
             <br />
